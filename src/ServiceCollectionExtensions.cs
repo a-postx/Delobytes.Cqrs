@@ -7,12 +7,12 @@ namespace Delobytes.Cqrs
     public static class ServiceCollectionExtensions
     {
         /// <summary>
-        /// Добавляет внетрипроцессную шину данных.
+        /// Добавляет внутрипроцессную шину данных.
         /// </summary>
         public static IServiceCollection AddCommandAndQueryBus(this IServiceCollection services, params Assembly[] assemblies)
         {
             services.AddMediatR(assemblies);
-            services.AddScoped<IBus, InMemoryBus>();
+            services.AddScoped<ICqrsBus, InMemoryBus>();
 
             return services;
         }

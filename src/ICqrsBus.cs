@@ -2,7 +2,7 @@
 
 namespace Delobytes.Cqrs
 {
-    public interface IBus
+    public interface ICqrsBus
     {
         Task<T> Execute<T>(ICommand<T> command);
         Task<T> Execute<T>(IQuery<T> query);

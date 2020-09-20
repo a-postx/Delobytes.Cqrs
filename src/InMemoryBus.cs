@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace Delobytes.Cqrs
 {
-    public sealed class InMemoryBus : IBus
+    public sealed class InMemoryBus : ICqrsBus
     {
         private readonly IMediator _mediator;
 
